@@ -96,7 +96,7 @@ function draw(){
 
   if(keyWentDown("space") && player.y>=440){
     player.velocityY = -15;
-  } else if(touches.length>0 && keyWentDown("up") && player.y>=440){
+  } else if(touches.length>0 || keyWentDown("up") && player.y>=440){
     player.velocityY = -25;
     touches = [];
   }
