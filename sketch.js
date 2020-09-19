@@ -35,7 +35,7 @@ function preload(){
 
 function setup() {
 // Adjust the  canvas according to the width and height of the height.
-  createCanvas(displayWidth/2+50,displayHeight-150);
+  createCanvas(windowWidth/2+200, windowHeight);
   
 // Creating groups for bananas and stones.
 bananaGroup = createGroup();
@@ -96,7 +96,7 @@ function draw(){
 
   if(keyWentDown("space") && player.y>=440){
     player.velocityY = -15;
-  } else if(touches.length > 0 && keyWentDown("up") && player.y>=440){
+  } else if(touches.length>0 && keyWentDown("up") && player.y>=440){
     player.velocityY = -25;
     touches = [];
   }
